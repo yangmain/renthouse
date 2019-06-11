@@ -1,0 +1,29 @@
+server:
+  port: 8081
+#================================安全认证配置=============================
+#security:
+#  user:
+#    name: Ares
+#    password: 123
+#================================安全认证配置=============================
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    appname: DiscoveryServer
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#   心跳检查,默认是false,Eureka自我保护模式会没有及时剔除关停节点,
+#   关闭eureka server的自我保护模式并在client端配置心跳开启
+#   当eureka server在一定时间内没有收到实例的心跳，便会把该实例从注册表中删除（默认是90秒），
+#   但是，如果短时间内丢失大量的实例心跳，便会触发eureka server的自我保护机制，
+#   比如在开发测试时，需要频繁地重启微服务实例，但是我们很少会把eureka server一起重启（因为在开发过程中不会修改eureka注册中心），当一分钟内收到的心跳数大量减少时，会触发该保护机制。
+#   该保护机制的目的是避免网络连接故障，在发生网络故障时，微服务和注册中心之间无法正常通信，
+#   但服务本身是健康的，不应该注销该服务，如果eureka因网络故障而把微服务误删了，
+#   那即使网络恢复了，该微服务也不会重新注册到eureka server了，
+#   因为只有在微服务启动的时候才会发起注册请求，后面只会发送心跳和服务列表请求，
+#   这样的话，该实例虽然是运行着，但永远不会被其它服务所感知
+#   healthcheck:
+#     enabled: true

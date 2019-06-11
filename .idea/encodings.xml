@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/authorization-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/authorization-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-expand" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sharing-strategy-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sharing-strategy-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/unified-portal" charset="UTF-8" />
+  </component>
+</project>
