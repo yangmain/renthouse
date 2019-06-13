@@ -1,10 +1,7 @@
 [
   {
     "serviceId": "100000",
-    "serviceName": "com.asiainfo.function.AuthorizationFuncService",
-    "serviceVersion": "1.0.0",
-    "serviceCenter": "authorization-impl",
-    "methodName": "authorization",
-    "requestType": "com.asiainfo.entitys.AuthorizationRequest"
+    "remoteInfcName": "com.asiainfo.function.AuthorizationFuncService",
+    "serviceCenter": "authorization-impl"
   }
 ]

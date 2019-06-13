@@ -6,7 +6,7 @@ package com.asiainfo.exceptions;
  * @Description: 远程调用自定义异常
  * @Version: JDK 1.8
  */
-public class RemoteInvokeException extends Exception
+public class RemoteInvokeException extends RuntimeException
 {
     private static final long serialVersionUID = -2038262924659942460L;
     /**

@@ -1,5 +1,6 @@
-package com.asiainfo.base;
+package com.asiainfo.invoke;
 
+import com.asiainfo.annotations.RemoteInfc;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -12,18 +13,17 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionReaderUtils;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
-import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.AnnotationScopeMetadataResolver;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ScopeMetadata;
 import org.springframework.context.annotation.ScopeMetadataResolver;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.CollectionUtils;
 
 import java.beans.Introspector;
+import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Method;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,50 +34,52 @@ import java.util.List;
  * @Version: JDK 1.8
  */
 @Configuration
-public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcessor, ResourceLoaderAware
+public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcessor
 {
     private static final Logger logger = LoggerFactory.getLogger(RemoteServiceRegistry.class);
 
     private ScopeMetadataResolver scopeMetadataResolver = new AnnotationScopeMetadataResolver();
 
-    private static final String JSON_FILE_NAME = "classpath:remote-service.json";
-
-    private ResourceLoader resourceLoader;
+    private static final String JSON_FILE_NAME = "remote-service.json";
 
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry beanDefinitionRegistry) throws BeansException
     {
+        URL url = ClassLoader.getSystemResource(JSON_FILE_NAME);
+        if (null == url)
+        {
+            logger.info("远程调用配置文件{}不存在,不再生成代理服务并注册", JSON_FILE_NAME);
+            return;
+        }
         List<RemoteProxyService> serviceList = null;
         try
         {
             ObjectMapper mapper = new ObjectMapper();
             JavaType javaType = mapper.getTypeFactory().constructParametricType(ArrayList.class, RemoteProxyService.class);
-            serviceList = mapper.readValue(resourceLoader.getResource(JSON_FILE_NAME).getInputStream(), javaType);
+            serviceList = mapper.readValue(new File(url.getPath()), javaType);
         } catch (IOException e)
         {
-            logger.error("读取文件并转为远程代理服务时出错: ", e);
+            logger.error("读取远程调用配置文件并转为远程代理服务时出错: ", e);
         }
 
         if (!CollectionUtils.isEmpty(serviceList))
         {
-            for (RemoteProxyService proxyService : serviceList)
+            for (RemoteProxyService service : serviceList)
             {
-                logger.info("开始生成远程代理服务,服务id: {}", proxyService.getServiceId());
+                logger.info("开始生成远程代理服务并注册,服务id: {}", service.getServiceId());
                 Class<?> clazz;
-                Class<?> requestType;
-                Method method;
                 try
                 {
-                    clazz = Class.forName(proxyService.getServiceName());
-                    requestType = Class.forName(proxyService.getRequestType());
-                    method = clazz.getMethod(proxyService.getMethodName(), requestType);
+                    clazz = Class.forName(service.getRemoteInfcName());
+                    RemoteInfc remoteInfc = clazz.getAnnotation(RemoteInfc.class);
+                    if (null == remoteInfc)
+                    {
+                        logger.error("当前服务不是远程接口,请为{}加上RemoteInfc注解", service.getRemoteInfcName());
+                        continue;
+                    }
                 } catch (ClassNotFoundException e)
                 {
                     logger.error("加载class时失败,请检查json配置: ", e);
-                    continue;
-                } catch (NoSuchMethodException e)
-                {
-                    logger.error("获取method时失败,请检查json配置: ", e);
                     continue;
                 }
 
@@ -87,14 +89,13 @@ public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcesso
                 annotatedBeanDefinition.setScope(scopeMetadata.getScopeName());
 
                 annotatedBeanDefinition.setAutowireCandidate(true);
-                proxyService.setProxyMethod(method);
-                annotatedBeanDefinition.getPropertyValues().addPropertyValue("remoteService", clazz);
-                annotatedBeanDefinition.getPropertyValues().addPropertyValue("serviceCenter", proxyService.getServiceCenter());
+                annotatedBeanDefinition.getPropertyValues().addPropertyValue("remoteInfcClass", clazz);
+                annotatedBeanDefinition.getPropertyValues().addPropertyValue("serviceCenter", service.getServiceCenter());
 
-                String beanName = Introspector.decapitalize(ClassUtils.getShortName(proxyService.getServiceName()));
-                BeanDefinitionHolder beanDefinitionHolder = new BeanDefinitionHolder(annotatedBeanDefinition, beanName, new String[]{proxyService.getServiceId()});
+                String beanName = Introspector.decapitalize(ClassUtils.getShortName(service.getRemoteInfcName()));
+                BeanDefinitionHolder beanDefinitionHolder = new BeanDefinitionHolder(annotatedBeanDefinition, beanName, new String[]{service.getServiceId()});
                 BeanDefinitionReaderUtils.registerBeanDefinition(beanDefinitionHolder, beanDefinitionRegistry);
-                logger.info("生成远程代理服务结束,服务id: {}", proxyService.getServiceId());
+                logger.info("生成远程代理服务并注册成功,服务id: {}", service.getServiceId());
             }
         }
     }
@@ -103,11 +104,5 @@ public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcesso
     public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException
     {
 
-    }
-
-    @Override
-    public void setResourceLoader(ResourceLoader resourceLoader)
-    {
-        this.resourceLoader = resourceLoader;
     }
 }

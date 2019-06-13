@@ -1,6 +1,6 @@
 package com.asiainfo.function;
 
-import com.asiainfo.base.RemoteRef;
+import com.asiainfo.annotations.RemoteInfc;
 import com.asiainfo.entitys.AuthorizationRequest;
 import com.asiainfo.entitys.AuthorizationResponse;
 
@@ -10,7 +10,7 @@ import com.asiainfo.entitys.AuthorizationResponse;
  * @Description: 鉴权功能层接口
  * @Version: JDK 1.8
  */
-@RemoteRef
+@RemoteInfc
 public interface AuthorizationFuncService
 {
     /**

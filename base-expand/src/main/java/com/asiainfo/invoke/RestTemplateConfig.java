@@ -1,4 +1,4 @@
-package com.asiainfo.base;
+package com.asiainfo.invoke;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;

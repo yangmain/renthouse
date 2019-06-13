@@ -1,4 +1,4 @@
-package com.asiainfo.base;
+package com.asiainfo.invoke;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +14,9 @@ import org.springframework.stereotype.Component;
 public class RemoteServiceFactory implements FactoryBean
 {
     /**
-     * 远程服务
+     * 远程服务接口
      */
-    private Class<?> remoteService;
+    private Class<?> remoteInfcClass;
     /**
      * 调用的内部服务节点名
      */
@@ -33,14 +33,14 @@ public class RemoteServiceFactory implements FactoryBean
         this.remoteInvokeHandler = remoteInvokeHandler;
     }
 
-    public Class<?> getRemoteService()
+    public Class<?> getRemoteInfcClass()
     {
-        return remoteService;
+        return remoteInfcClass;
     }
 
-    public void setRemoteService(Class<?> remoteService)
+    public void setRemoteInfcClass(Class<?> remoteInfcClass)
     {
-        this.remoteService = remoteService;
+        this.remoteInfcClass = remoteInfcClass;
     }
 
     public String getServiceCenter()
@@ -56,13 +56,13 @@ public class RemoteServiceFactory implements FactoryBean
     @Override
     public Object getObject() throws Exception
     {
-        return remoteInvokeHandler.remoteInvoke(remoteService, serviceCenter);
+        return remoteInvokeHandler.remoteInvoke(remoteInfcClass, serviceCenter);
     }
 
     @Override
     public Class<?> getObjectType()
     {
-        return remoteService;
+        return remoteInfcClass;
     }
 
     @Override

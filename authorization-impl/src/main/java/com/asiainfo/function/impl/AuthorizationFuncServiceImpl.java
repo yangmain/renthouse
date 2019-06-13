@@ -1,6 +1,7 @@
 package com.asiainfo.function.impl;
 
-import com.asiainfo.base.RemoteService;
+import com.asiainfo.annotations.RemoteService;
+import com.asiainfo.base.ResponseEnum;
 import com.asiainfo.business.AuthorizationBusiService;
 import com.asiainfo.entitys.AuthorizationRequest;
 import com.asiainfo.entitys.AuthorizationResponse;
@@ -30,10 +31,11 @@ public class AuthorizationFuncServiceImpl implements AuthorizationFuncService
     {
         AuthorizationResponse response = new AuthorizationResponse();
         logger.info("开始执行功能方法");
-        logger.info("当前用户为{}",request.getUserName());
+        logger.info("当前用户为{}", request.getUserName());
         authorizationBusiService.authorization(request.getAuthorization());
         logger.info("执行功能方法完毕");
         response.setAuthorization(request.getAuthorization());
+        response.setResponseEnum(ResponseEnum.SUCCESS);
         return response;
     }
 }

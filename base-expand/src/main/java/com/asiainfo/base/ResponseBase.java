@@ -37,6 +37,12 @@ public class ResponseBase
         this.responseDesc = responseDesc;
     }
 
+    public void setResponseEnum(ResponseEnum responseEnum)
+    {
+        this.responseCode = responseEnum.getResponseCode();
+        this.responseDesc = responseEnum.getResponseDesc();
+    }
+
     @Override
     public String toString()
     {
