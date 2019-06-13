@@ -79,7 +79,7 @@ public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcesso
                     }
                 } catch (ClassNotFoundException e)
                 {
-                    logger.error("加载class时失败,请检查json配置: ", e);
+                    logger.error("加载class时失败,请检查远程调用配置文件[{}]: ", JSON_FILE_NAME, e);
                     continue;
                 }
 
