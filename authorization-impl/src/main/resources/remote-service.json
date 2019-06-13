@@ -1,0 +1,7 @@
+[
+  {
+    "serviceId": "100001",
+    "remoteInfcName": "com.asiainfo.function.SharingStrategyFuncService",
+    "serviceCenter": "sharing-strategy-impl"
+  }
+]

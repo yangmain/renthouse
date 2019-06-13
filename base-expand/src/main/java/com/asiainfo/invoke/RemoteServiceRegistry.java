@@ -48,7 +48,7 @@ public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcesso
         URL url = ClassLoader.getSystemResource(JSON_FILE_NAME);
         if (null == url)
         {
-            logger.info("远程调用配置文件{}不存在,不再生成代理服务并注册", JSON_FILE_NAME);
+            logger.info("远程调用配置文件[{}]不存在,不再生成代理服务并注册", JSON_FILE_NAME);
             return;
         }
         List<RemoteProxyService> serviceList = null;
@@ -59,7 +59,7 @@ public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcesso
             serviceList = mapper.readValue(new File(url.getPath()), javaType);
         } catch (IOException e)
         {
-            logger.error("读取远程调用配置文件并转为远程代理服务时出错: ", e);
+            logger.error("读取远程调用配置文件[{}]并转为远程代理服务时出错: ", JSON_FILE_NAME, e);
         }
 
         if (!CollectionUtils.isEmpty(serviceList))

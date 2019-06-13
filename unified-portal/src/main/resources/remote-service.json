@@ -3,5 +3,10 @@
     "serviceId": "100000",
     "remoteInfcName": "com.asiainfo.function.AuthorizationFuncService",
     "serviceCenter": "authorization-impl"
+  },
+  {
+    "serviceId": "100001",
+    "remoteInfcName": "com.asiainfo.function.LocalInvokeTestService",
+    "serviceCenter": "authorization-impl"
   }
 ]

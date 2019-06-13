@@ -15,7 +15,7 @@ public enum ResponseEnum implements ResponseEnumInfc
     /**
      * 1开头远程调用失败
      */
-    INVOKE_FAILURE("1000", "远程调用失败"), INVOKE_FAILURE_NOT_FOUND_SERVICE("1001", "在当前实例找不到对应的服务,请检查调用服务是否配置RemoteService注解"),
+    INVOKE_FAILURE("1000", "远程调用失败"), INVOKE_FAILURE_NOT_FOUND_SERVICE("1001", "在当前实例找不到对应的服务,请检查调用服务是否配置RemoteService注解"), INVOKE_FAILURE_MORE_THAN_ONE("1002", "发现多个同版本服务实现,请指定不同版本或修改接口"),
     /**
      * 9代表未知错误
      */

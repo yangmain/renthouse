@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -39,7 +39,7 @@ public class CommonController
     /**
      * 代理方法Map
      */
-    private static final Map<String, RemoteProxyService> PROXY_SERVICE_MAP = new HashMap<>();
+    private static final MultiValueMap<String, RemoteProxyService> PROXY_SERVICE_MAP = new LinkedMultiValueMap<>();
 
     /**
      * @Author: Ares
@@ -50,7 +50,7 @@ public class CommonController
      */
     public static void addProxyMethod(String uniqueKey, RemoteProxyService proxyService)
     {
-        PROXY_SERVICE_MAP.put(uniqueKey, proxyService);
+        PROXY_SERVICE_MAP.add(uniqueKey, proxyService);
     }
 
     /**
@@ -78,9 +78,23 @@ public class CommonController
     public Object innerInvoke(@RequestParam(required = false) MultiValueMap<String, Object> parameters)
     {
         ResponseBase response = new ResponseBase();
-        RemoteProxyService service = PROXY_SERVICE_MAP.get(Objects.requireNonNull(parameters.getFirst("uniqueKey")).toString());
-        if (null == service || null == service.getProxyService())
+        List<RemoteProxyService> proxyServices = PROXY_SERVICE_MAP.get(Objects.requireNonNull(parameters.getFirst("uniqueKey")).toString());
+        if (null == proxyServices)
         {
+            logger.error(ResponseEnum.INVOKE_FAILURE_NOT_FOUND_SERVICE.getResponseDesc());
+            response.setResponseEnum(ResponseEnum.INVOKE_FAILURE_NOT_FOUND_SERVICE);
+            return response;
+        }
+        if (proxyServices.size() > 1)
+        {
+            logger.error(ResponseEnum.INVOKE_FAILURE_MORE_THAN_ONE.getResponseDesc());
+            response.setResponseEnum(ResponseEnum.INVOKE_FAILURE_MORE_THAN_ONE);
+            return response;
+        }
+        RemoteProxyService service = proxyServices.get(0);
+        if (null == service || null == service.getProxyService() || null == service.getProxyMethod())
+        {
+            logger.error(ResponseEnum.INVOKE_FAILURE_NOT_FOUND_SERVICE.getResponseDesc());
             response.setResponseEnum(ResponseEnum.INVOKE_FAILURE_NOT_FOUND_SERVICE);
             return response;
         }
@@ -96,7 +110,7 @@ public class CommonController
             return method.invoke(service.getProxyService(), requestParam);
         } catch (Exception e)
         {
-            logger.error("远程调用失败: ", e);
+            logger.error("{}: ", ResponseEnum.INVOKE_FAILURE.getResponseDesc(), e);
             response.setResponseEnum(ResponseEnum.INVOKE_FAILURE);
         }
         return response;

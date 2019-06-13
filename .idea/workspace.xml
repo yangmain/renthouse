@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a00c5d57-aee2-46a4-bcbf-91435ce3942a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnumInfc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/CommonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ThinkPad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/ThinkPad.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/function/LocalInvokeTestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncService2Impl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/LocalInvokeTestServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-impl/src/main/resources/remote-service.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sharing-strategy-api/src/main/java/com/asiainfo/function/SharingStrategyFuncService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/business/AuthorizationBusiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/business/AuthorizationBusiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/function/AuthorizationFuncService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/function/AuthorizationFuncService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/CommonController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteInvokeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteInvokeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteProxyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteProxyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/annotations/RemoteInfc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/annotations/RemoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteServiceConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RestTemplateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/exceptions/RemoteInvokeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/exceptions/RemoteInvokeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/utils/SpringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/utils/SpringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/Authorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/controller/RemoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/controller/RemoteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unified-portal/src/main/resources/remote-service.json" beforeDir="false" afterPath="$PROJECT_DIR$/unified-portal/src/main/resources/remote-service.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,45 +47,46 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
-          <entry key="dummy" value="5" />
-          <entry key="java" value="3140" />
-          <entry key="json" value="25" />
+          <entry key="dummy" value="20" />
+          <entry key="java" value="3647" />
+          <entry key="json" value="30" />
           <entry key="properties" value="2" />
-          <entry key="xml" value="177" />
+          <entry key="txt" value="19" />
+          <entry key="xml" value="215" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="3140" />
-          <entry key="JSON" value="25" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="JAVA" value="3647" />
+          <entry key="JSON" value="30" />
+          <entry key="PLAIN_TEXT" value="39" />
           <entry key="Properties" value="2" />
-          <entry key="XML" value="177" />
+          <entry key="XML" value="215" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="2" />
-          <entry key="class" value="54" />
+          <entry key="class" value="57" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="385" />
-          <entry key="json" value="15" />
+          <entry key="java" value="449" />
+          <entry key="json" value="20" />
           <entry key="pom" value="3" />
           <entry key="properties" value="15" />
-          <entry key="xml" value="48" />
+          <entry key="xml" value="54" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="54" />
+          <entry key="CLASS" value="57" />
           <entry key="Git file" value="2" />
-          <entry key="JAVA" value="385" />
-          <entry key="JSON" value="15" />
+          <entry key="JAVA" value="449" />
+          <entry key="JSON" value="20" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="15" />
-          <entry key="XML" value="51" />
+          <entry key="XML" value="57" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -103,10 +95,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/LocalInvokeTestServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state relative-caret-position="21">
+              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,64 +107,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationRequest.java">
+        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteProxyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="89">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/CommonController.java">
+        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+            <state relative-caret-position="72">
+              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Objects.java">
+        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceRegistry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="200" column="38" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="38" />
+            <state relative-caret-position="35">
+              <caret line="66" column="36" lean-forward="true" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnum.java">
+        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteInvokeHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="162">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/exceptions/RemoteInvokeException.java">
+        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RestTemplateConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+            <state relative-caret-position="116">
+              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/utils/SpringUtil.java">
+        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/utils/DynamicProxyUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="183">
+              <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,8 +177,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -216,13 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/authorizationimpl/business/impl/AuthorizationBusiServiceImpl.java" />
-        <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/authorizationapi/business/AuthorizationBusiService.java" />
-        <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/authorizationapi/function/AuthorizationFuncService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/sharing-strategy-impl/src/main/java/com/asiainfo/sharingstrategyimpl/SharingStrategyImplApplication.java" />
-        <option value="$PROJECT_DIR$/unified-portal/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/unifiedportal/controller/EurekaController.java" />
         <option value="$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/unifiedportal/controller/RemoteController.java" />
         <option value="$PROJECT_DIR$/sharing-strategy-impl/src/test/java/com/asiainfo/sharingstrategyimpl/SharingStrategyImplApplicationTests.java" />
         <option value="$PROJECT_DIR$/authorization-impl/src/test/java/com/asiainfo/authorizationimpl/AuthorizationImplApplicationTests.java" />
@@ -237,24 +226,19 @@
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/utils/SpringUtil.java" />
         <option value="$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/UnifiedPortalApplication.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RequestBase.java" />
-        <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationRequest.java" />
         <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationResponse.java" />
-        <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/Authorization.java" />
         <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/business/AuthorizationBusiService.java" />
         <option value="$PROJECT_DIR$/unified-portal/pom.xml" />
         <option value="$PROJECT_DIR$/base-expand/pom.xml" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RestTemplateConfig.java" />
         <option value="$PROJECT_DIR$/sharing-strategy-impl/pom.xml" />
-        <option value="$PROJECT_DIR$/authorization-impl/pom.xml" />
         <option value="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/business/impl/AuthorizationBusiServiceImpl.java" />
-        <option value="$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/controller/RemoteController.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/annotations/RemoteRef.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/annotations/RemoteInfc.java" />
         <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/function/AuthorizationFuncService.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteServiceFactory.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteInvokeHandler.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteServiceRegistry.java" />
-        <option value="$PROJECT_DIR$/unified-portal/src/main/resources/remote-service.json" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteProxyService.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteServiceConfig.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/exceptions/RemoteInvokeException.java" />
@@ -262,11 +246,23 @@
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/ResponseBase.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnumInfc.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseBase.java" />
-        <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnum.java" />
-        <option value="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncServiceImpl.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteInvokeHandler.java" />
+        <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnum.java" />
+        <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationRequest.java" />
+        <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/Authorization.java" />
+        <option value="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncServiceImpl2.java" />
+        <option value="$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/function/LocalInvokeTestService.java" />
+        <option value="$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/controller/RemoteController.java" />
+        <option value="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncService2Impl.java" />
+        <option value="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncServiceImpl.java" />
+        <option value="$PROJECT_DIR$/unified-portal/src/main/resources/remote-service.json" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceRegistry.java" />
         <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/CommonController.java" />
+        <option value="$PROJECT_DIR$/authorization-impl/src/main/resources/remote-service.json" />
+        <option value="$PROJECT_DIR$/sharing-strategy-api/src/main/java/com/asiainfo/function/SharingStrategyFuncService.java" />
+        <option value="$PROJECT_DIR$/authorization-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/LocalInvokeTestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceConfig.java" />
       </list>
     </option>
   </component>
@@ -612,6 +608,16 @@
               <item name="authorization-impl" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="asiainfo" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="authorization-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -657,27 +663,95 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="asiainfo" type="462c0819:PsiDirectoryNode" />
-              <item name="annotations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="base-expand" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="asiainfo" type="462c0819:PsiDirectoryNode" />
               <item name="invoke" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
               <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="base-expand" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="asiainfo" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="asiainfo" type="462c0819:PsiDirectoryNode" />
+              <item name="function" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="asiainfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
@@ -732,19 +806,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -761,7 +822,7 @@
     <property name="SearchEverywhereHistoryKey" value="Ref&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_121/jre/lib/rt.jar!/sun/misc/Ref.class&#10;FactoryBeanRegistrySupport&#9;ACTION&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560405822718" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560411668525" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ares-fun" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -775,16 +836,17 @@
       <recent name="D:\Projects\IdeaProjects\renthouse\.idea" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.asiainfo.function.impl" />
       <recent name="com.asiainfo.unifiedportal.controller" />
       <recent name="com.asiainfo.authorizationimpl.business.impl" />
       <recent name="com.asiainfo.authorizationimpl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\IdeaProjects\renthouse\authorization-impl\src\main\resources" />
       <recent name="D:\Projects\IdeaProjects\renthouse\base-expand\src\main\java\com\asiainfo\annotations" />
       <recent name="D:\Projects\IdeaProjects\renthouse\unified-portal\src\main\resources" />
       <recent name="D:\Projects\IdeaProjects\renthouse\authorization-impl\src\main\java\com\asiainfo\authorizationimpl" />
       <recent name="D:\Projects\IdeaProjects\renthouse\sharing-strategy-api\src\main\java\com\asiainfo\sharingstrategyapi" />
-      <recent name="D:\Projects\IdeaProjects\renthouse\authorization-api\src\main\java\com\asiainfo\authorizationapi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -864,18 +926,26 @@
       <option name="presentableId" value="Default" />
       <updated>1560230945907</updated>
       <workItem from="1560230949962" duration="24212000" />
-      <workItem from="1560256450114" duration="23892000" />
+      <workItem from="1560256450114" duration="29446000" />
     </task>
+    <task id="LOCAL-00001" summary="单参数版本小成">
+      <created>1560405910430</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560405910430</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48104000" />
+    <option name="totallyTimeSpent" value="53658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="736" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3131068" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3131068" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -888,7 +958,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.3283582" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5008091" side_tool="true" weight="0.46600333" />
       <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.49919093" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="5" sideWeight="0.49919093" visible="true" weight="0.46600333" />
+      <window_info anchor="bottom" id="Run Dashboard" order="5" sideWeight="0.49919093" visible="true" weight="0.46600333" />
       <window_info anchor="bottom" id="Problems" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49919093" weight="0.39137647" />
@@ -989,8 +1059,17 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="单参数版本小成" />
+    <option name="LAST_COMMIT_MESSAGE" value="单参数版本小成" />
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>request</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>!new File(JSON_FILE_NAME).exists()</expression-string>
         <language-id>JAVA</language-id>
@@ -1031,140 +1110,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>PROXY_METHOD_MAP.get(&quot;bda8af6a4f1f31c6b3c20883298dad5b&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/annotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RemoteRef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.7.RELEASE/spring-web-5.1.7.RELEASE.jar!/org/springframework/web/client/ResponseExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.7.RELEASE/spring-web-5.1.7.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="271" column="23" selection-start-line="271" selection-start-column="23" selection-end-line="271" selection-end-column="23" />
-          <folding>
-            <element signature="e#7857#7858#0" expanded="true" />
-            <element signature="e#7903#7904#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.7.RELEASE/spring-web-5.1.7.RELEASE.jar!/org/springframework/web/client/HttpMessageConverterExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="61" column="58" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="239" column="6" selection-start-line="239" selection-start-column="6" selection-end-line="239" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.7.RELEASE/spring-core-5.1.7.RELEASE.jar!/org/springframework/util/LinkedMultiValueMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
-          <folding>
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#3074#3075#0" expanded="true" />
-            <element signature="e#3133#3134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/UnifiedPortalApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.7.RELEASE/spring-core-5.1.7.RELEASE.jar!/org/springframework/util/DigestUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding>
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unified-portal/target/classes/remote-service.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="66" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/annotations/RemoteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/RequestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnumInfc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/UnknownError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/controller/EurekaController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1172,23 +1120,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/function/AuthorizationFuncService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/AuthorizationImplApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1209,16 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RestTemplateConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,23 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.7.RELEASE/spring-core-5.1.7.RELEASE.jar!/org/springframework/util/MultiValueMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1274,26 +1178,6 @@
           <folding>
             <element signature="e#420#421#0" expanded="true" />
             <element signature="e#470#471#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/business/impl/AuthorizationBusiServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/controller/RemoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1353,37 +1237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteInvokeHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-757">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unified-portal/src/main/resources/remote-service.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteProxyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="120" column="53" selection-start-line="120" selection-start-column="53" selection-end-line="120" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/FileInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -1395,30 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="1120" column="17" selection-start-line="1120" selection-start-column="17" selection-end-line="1120" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1443,13 +1272,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Objects.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -1457,10 +1279,277 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/CommonController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.7.RELEASE/spring-core-5.1.7.RELEASE.jar!/org/springframework/util/MultiValueMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/base/ResponseEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
-          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="e#925#926#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/Authorization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="37" column="29" lean-forward="true" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/UnifiedPortalApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/business/impl/AuthorizationBusiServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/controller/RemoteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.7.RELEASE/spring-context-5.1.7.RELEASE.jar!/org/springframework/stereotype/Service.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-archaius/2.0.0.RELEASE/spring-cloud-netflix-archaius-2.0.0.RELEASE.jar!/org/springframework/cloud/netflix/archaius/ArchaiusAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="76" column="55" selection-start-line="76" selection-start-column="55" selection-end-line="76" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/function/LocalInvokeTestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncService2Impl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/function/AuthorizationFuncService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unified-portal/src/main/resources/remote-service.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-api/src/main/java/com/asiainfo/entitys/AuthorizationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="28" selection-start-line="28" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/AuthorizationFuncServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/CommonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/AuthorizationImplApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-strategy-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/resources/remote-service.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-strategy-api/src/main/java/com/asiainfo/function/SharingStrategyFuncService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-impl/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-strategy-impl/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/java/com/asiainfo/function/impl/LocalInvokeTestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="66" column="36" lean-forward="true" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RestTemplateConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteInvokeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteProxyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-expand/src/main/java/com/asiainfo/invoke/RemoteServiceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
