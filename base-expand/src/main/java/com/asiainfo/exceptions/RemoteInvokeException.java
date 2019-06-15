@@ -1,5 +1,7 @@
 package com.asiainfo.exceptions;
 
+import com.asiainfo.base.ResponseEnum;
+
 /**
  * @Author: Ares
  * @Date: 2019/6/10 19:51
@@ -20,6 +22,12 @@ public class RemoteInvokeException extends RuntimeException
 
     public RemoteInvokeException()
     {
+    }
+
+    public RemoteInvokeException(ResponseEnum responseEnum)
+    {
+        this.errCode = responseEnum.getResponseCode();
+        this.errMsg = responseEnum.getResponseDesc();
     }
 
     public RemoteInvokeException(String errCode, String errMsg)

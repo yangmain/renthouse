@@ -2,6 +2,8 @@ package com.asiainfo.invoke;
 
 import com.asiainfo.annotations.RemoteInfc;
 import com.asiainfo.exceptions.RemoteInvokeException;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.DigestUtils;
@@ -9,7 +11,9 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Proxy;
+import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.StringJoiner;
 
@@ -25,9 +29,16 @@ public class RemoteInvokeHandler
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * 类加载器
+     */
+    private static final ClassLoader CLASSLOADER = RemoteInvokeHandler.class.getClassLoader();
+
+    private static ObjectMapper objectMapper = new ObjectMapper();
+
     public <T> T remoteInvoke(final Class<T> remoteInfcClass, String serviceCenter)
     {
-        @SuppressWarnings(value = "unchecked") T result = (T) Proxy.newProxyInstance(RemoteInvokeHandler.class.getClassLoader(), new Class<?>[]{remoteInfcClass}, (proxy, method, args) -> {
+        @SuppressWarnings(value = "unchecked") T result = (T) Proxy.newProxyInstance(CLASSLOADER, new Class<?>[]{remoteInfcClass}, (proxy, method, args) -> {
             MultiValueMap<String, Object> remoteRequest = new LinkedMultiValueMap<>();
 
             RemoteInfc remoteInfc = remoteInfcClass.getAnnotation(RemoteInfc.class);
@@ -47,7 +58,7 @@ public class RemoteInvokeHandler
             {
                 uniqueKey.add((paramTypes[i].getName()));
                 // 放置方法请求参数
-                remoteRequest.add(paramTypes[i].getName(), args[i]);
+                remoteRequest.add("arg" + i, args[i]);
             }
             remoteRequest.add("uniqueKey", DigestUtils.md5DigestAsHex(uniqueKey.toString().getBytes(StandardCharsets.UTF_8)));
 

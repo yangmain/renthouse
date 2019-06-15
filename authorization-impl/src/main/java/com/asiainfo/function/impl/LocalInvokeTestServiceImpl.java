@@ -35,6 +35,7 @@ public class LocalInvokeTestServiceImpl implements LocalInvokeTestService
     public AuthorizationResponse localInvokeTest(AuthorizationRequest request)
     {
         logger.info("开始测试本地调用");
-        return authorizationFuncService.authorization(request);
+        return null;
+//        return authorizationFuncService.authorization(request);
     }
 }
