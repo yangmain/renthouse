@@ -1,7 +1,7 @@
 package com.asiainfo.frame.invoke;
 
-import com.asiainfo.annotations.RemoteInfc;
-import com.asiainfo.exceptions.RemoteInvokeException;
+import com.asiainfo.frame.annotations.RemoteInfc;
+import com.asiainfo.frame.exceptions.RemoteInvokeException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

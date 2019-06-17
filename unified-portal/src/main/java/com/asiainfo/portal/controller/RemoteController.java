@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @Author: Ares
  * @Date: 2019/6/17 10:53
- * @Description:
+ * @Description: 测试远程调用
  * @Version: JDK 1.8
  */
 @RestController

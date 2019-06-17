@@ -1,7 +1,7 @@
 package com.asiainfo.frame.invoke;
 
-import com.asiainfo.annotations.RemoteInfc;
-import com.asiainfo.annotations.RemoteService;
+import com.asiainfo.frame.annotations.RemoteInfc;
+import com.asiainfo.frame.annotations.RemoteService;
 import com.asiainfo.frame.utils.DynamicProxyUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

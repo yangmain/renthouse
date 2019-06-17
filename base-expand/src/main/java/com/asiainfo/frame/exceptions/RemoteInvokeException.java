@@ -1,6 +1,6 @@
 package com.asiainfo.frame.exceptions;
 
-import com.asiainfo.base.ResponseEnum;
+import com.asiainfo.frame.base.ResponseEnum;
 
 /**
  * @Author: Ares

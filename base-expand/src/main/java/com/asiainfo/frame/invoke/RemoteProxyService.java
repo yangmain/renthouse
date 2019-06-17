@@ -11,10 +11,6 @@ import java.lang.reflect.Method;
 public class RemoteProxyService
 {
     /**
-     * 服务id
-     */
-    private String serviceId;
-    /**
      * 远程接口全名
      */
     private String remoteInfcName;
@@ -32,15 +28,22 @@ public class RemoteProxyService
      */
     private Method proxyMethod;
 
-    public String getServiceId()
-    {
-        return serviceId;
-    }
-
-    public void setServiceId(String serviceId)
-    {
-        this.serviceId = serviceId;
-    }
+    /**
+     * 服务id,用于对外统一调用
+     */
+    private String serviceId;
+    /**
+     * 服务版本,用于对外统一调用
+     */
+    private String serviceVersion;
+    /**
+     * 方法名,用于对外统一调用
+     */
+    private String methodName;
+    /**
+     * 方法的请求类型,用于对外统一调用
+     */
+    private String requestType;
 
     public String getRemoteInfcName()
     {
@@ -80,5 +83,45 @@ public class RemoteProxyService
     public void setProxyMethod(Method proxyMethod)
     {
         this.proxyMethod = proxyMethod;
+    }
+
+    public String getServiceId()
+    {
+        return serviceId;
+    }
+
+    public void setServiceId(String serviceId)
+    {
+        this.serviceId = serviceId;
+    }
+
+    public String getServiceVersion()
+    {
+        return serviceVersion;
+    }
+
+    public void setServiceVersion(String serviceVersion)
+    {
+        this.serviceVersion = serviceVersion;
+    }
+
+    public String getMethodName()
+    {
+        return methodName;
+    }
+
+    public void setMethodName(String methodName)
+    {
+        this.methodName = methodName;
+    }
+
+    public String getRequestType()
+    {
+        return requestType;
+    }
+
+    public void setRequestType(String requestType)
+    {
+        this.requestType = requestType;
     }
 }

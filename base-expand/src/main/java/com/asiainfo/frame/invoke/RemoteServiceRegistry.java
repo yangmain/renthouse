@@ -1,6 +1,6 @@
 package com.asiainfo.frame.invoke;
 
-import com.asiainfo.annotations.RemoteInfc;
+import com.asiainfo.frame.annotations.RemoteInfc;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -23,6 +23,7 @@ import org.springframework.util.CollectionUtils;
 import java.beans.Introspector;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +39,6 @@ public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcesso
 {
     private static final Logger logger = LoggerFactory.getLogger(RemoteServiceRegistry.class);
 
-    /**
-     * 配置文件中的服务列表
-     */
-    private static List<RemoteProxyService> SERVICE_LIST = null;
-
     private ScopeMetadataResolver scopeMetadataResolver = new AnnotationScopeMetadataResolver();
 
     private static final String JSON_FILE_NAME = "remote-service.json";
@@ -56,20 +52,22 @@ public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcesso
             logger.info("远程调用配置文件[{}]不存在,不再生成代理服务并注册", JSON_FILE_NAME);
             return;
         }
+
+        List<RemoteProxyService> serviceList = null;
         try
         {
             ObjectMapper mapper = new ObjectMapper();
             JavaType javaType = mapper.getTypeFactory().constructParametricType(ArrayList.class, RemoteProxyService.class);
-            SERVICE_LIST = mapper.readValue(new File(url.getPath()), javaType);
+            serviceList = mapper.readValue(new File(url.getPath()), javaType);
         } catch (IOException e)
         {
             logger.error("读取远程调用配置文件[{}]并转为远程代理服务时出错: ", JSON_FILE_NAME, e);
         }
 
         List<String> filterList = new ArrayList<>();
-        if (!CollectionUtils.isEmpty(SERVICE_LIST))
+        if (!CollectionUtils.isEmpty(serviceList))
         {
-            for (RemoteProxyService service : SERVICE_LIST)
+            for (RemoteProxyService service : serviceList)
             {
                 String beanUnique = service.getServiceCenter() + ":" + service.getRemoteInfcName();
                 if (filterList.contains(beanUnique))
@@ -82,15 +80,19 @@ public class RemoteServiceRegistry implements BeanDefinitionRegistryPostProcesso
                 try
                 {
                     clazz = Class.forName(service.getRemoteInfcName());
+
                     RemoteInfc remoteInfc = clazz.getAnnotation(RemoteInfc.class);
                     if (null == remoteInfc)
                     {
-                        logger.error("当前服务不是远程接口,请为{}加上RemoteInfc注解", service.getRemoteInfcName());
+                        logger.error("当前服务不是远程接口,请为{}加上RemoteInfc注解", beanUnique);
                         continue;
                     }
-                } catch (ClassNotFoundException e)
+
+                    Method method = clazz.getMethod(service.getMethodName(), Class.forName(service.getRequestType()));
+                    CommonController.addServiceId(service.getServiceId(), method);
+                } catch (ClassNotFoundException | NoSuchMethodException e)
                 {
-                    logger.error("加载class时失败,请检查远程调用配置文件[{}]: ", JSON_FILE_NAME, e);
+                    logger.error("加载class或method时失败,请检查远程调用配置文件[{}]: ", JSON_FILE_NAME, e);
                     continue;
                 }
 

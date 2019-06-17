@@ -1,10 +1,12 @@
 package com.asiainfo.frame.invoke;
 
-import com.asiainfo.base.ResponseBase;
-import com.asiainfo.base.ResponseEnum;
-import com.asiainfo.exceptions.RemoteInvokeException;
+
+import com.asiainfo.frame.base.ResponseBase;
+import com.asiainfo.frame.base.ResponseEnum;
+import com.asiainfo.frame.exceptions.RemoteInvokeException;
 import com.asiainfo.frame.utils.ClassTypeUtil;
 import com.asiainfo.frame.utils.DateUtil;
+import com.asiainfo.frame.utils.SpringUtil;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -59,6 +62,11 @@ public class CommonController
     private static final MultiValueMap<String, RemoteProxyService> REMOTE_PROXY_SERVICE = new LinkedMultiValueMap<>();
 
     /**
+     * 统一服务调用Map
+     */
+    private static final Map<String, Method> UNIFIED_SERVICE_MAP = new HashMap<>();
+
+    /**
      * @Author: Ares
      * @Description: 添加代理方法
      * @Date: 2019/6/13 10:59
@@ -72,16 +80,40 @@ public class CommonController
 
     /**
      * @Author: Ares
+     * @Description: 添加统一调用服务
+     * @Date: 2019/6/17 15:47
+     * @Param: [service, uniqueKey] 请求参数
+     * @return: void 响应参数
+     */
+    public static void addServiceId(String service, Method method)
+    {
+        UNIFIED_SERVICE_MAP.put(service, method);
+    }
+
+    /**
+     * @Author: Ares
      * @Description: 统一调用地址
      * @Date: 2019/6/10 20:21
      * @Param: [request] 请求参数
      * @return: java.lang.Object 响应参数
      */
     @RequestMapping(value = "/invoke")
-    public Object invoke(HttpServletRequest request)
+    public Object invoke(HttpServletRequest request, @RequestBody String requestObject)
     {
-        logger.info(request.getParameter("serviceId"));
-        return null;
+        try
+        {
+            String serviceId = request.getParameter("serviceId");
+            Method method = UNIFIED_SERVICE_MAP.get(serviceId);
+            Object bean = SpringUtil.getBean(serviceId);
+            Object requestParam = objectMapper.readValue(requestObject, method.getParameterTypes()[0]);
+            return method.invoke(bean, requestParam);
+        } catch (Exception e)
+        {
+            logger.error("{}: ", ResponseEnum.UNKNOWN_ERROR.getResponseDesc(), e);
+            ResponseBase response = new ResponseBase();
+            response.setResponseEnum(ResponseEnum.UNKNOWN_ERROR);
+            return response;
+        }
     }
 
     /**
@@ -149,7 +181,7 @@ public class CommonController
      * 请求Class,值,json操作标识
      * @return: java.lang.Object 响应参数
      */
-    private Object paramHandle(Class<?> requestType, Object value, MutableBoolean flag) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, ParseException
+    private Object paramHandle(Class<?> requestType, Object value, MutableBoolean flag)
     {
         if (value != null)
         {
@@ -181,16 +213,23 @@ public class CommonController
             // 基础类型包装类
             else if (ClassTypeUtil.isBaseWrap(requestType))
             {
-                // 对Character做特殊处理
-                if (requestType.getName().contains("Character"))
+                try
                 {
-                    return value.toString().charAt(1);
-                }
-                else
+                    // 对Character做特殊处理
+                    if (requestType.getName().contains("Character"))
+                    {
+                        return value.toString().charAt(1);
+                    }
+                    else
+                    {
+                        Class<?> clazz = Class.forName(requestType.getName());
+                        Method valueOfMethod = clazz.getMethod("valueOf", String.class);
+                        return valueOfMethod.invoke(null, value.toString());
+                    }
+                } catch (NoSuchMethodException | IllegalAccessException | ClassNotFoundException | InvocationTargetException e)
                 {
-                    Class<?> clazz = Class.forName(requestType.getName());
-                    Method valueOfMethod = clazz.getMethod("valueOf", String.class);
-                    return valueOfMethod.invoke(null, value.toString());
+                    logger.error("{}: ", ResponseEnum.INVOKE_FAILURE.getResponseDesc(), e);
+                    throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE);
                 }
             }// 字符串
             else if (String.class.isAssignableFrom(requestType))
@@ -211,7 +250,14 @@ public class CommonController
             }
             else if (Date.class.isAssignableFrom(requestType))
             {
-                return DateUtil.parse(value.toString().replaceAll("\"", ""));
+                try
+                {
+                    return DateUtil.parse(value.toString().replaceAll("\"", ""));
+                } catch (ParseException e)
+                {
+                    logger.error("{}: ", ResponseEnum.INVOKE_FAILURE_DATE_ERROR.getResponseDesc(), e);
+                    throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE_DATE_ERROR);
+                }
             }
             else if (LocalDateTime.class.isAssignableFrom(requestType))
             {
@@ -258,9 +304,9 @@ public class CommonController
                 {
                     logger.error("{}: ", ResponseEnum.INVOKE_FAILURE_JSON_PARSE.getResponseDesc(), e);
                     throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE_JSON_PARSE);
-                } catch (InstantiationException e)
+                } catch (InstantiationException | NoSuchMethodException | IllegalAccessException | InvocationTargetException | ClassNotFoundException e)
                 {
-                    logger.error("", e);
+                    logger.error("{}: ", ResponseEnum.INVOKE_FAILURE.getResponseDesc(), e);
                     throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE);
                 }
             }// 集合
@@ -299,22 +345,30 @@ public class CommonController
                         collection.add(null == element ? null : paramHandle(element.getClass(), element, flag));
                     }
                     return collection;
-                } catch (InstantiationException | IOException e)
+                } catch (IOException e)
                 {
-                    logger.error("", e);
+                    logger.error("{}: ", ResponseEnum.INVOKE_FAILURE_JSON_PARSE.getResponseDesc(), e);
+                    throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE_JSON_PARSE);
+                } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e)
+                {
+                    logger.error("{}: ", ResponseEnum.INVOKE_FAILURE.getResponseDesc(), e);
                     throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE);
                 }
             }
             else
             {
-                Class<?> clazz = Class.forName(requestType.getName());
                 try
                 {
+                    Class<?> clazz = Class.forName(requestType.getName());
                     return objectMapper.readValue(value.toString(), clazz);
                 } catch (IOException e)
                 {
                     logger.error("{}: ", ResponseEnum.INVOKE_FAILURE_JSON_PARSE.getResponseDesc(), e);
                     throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE_JSON_PARSE);
+                } catch (ClassNotFoundException e)
+                {
+                    logger.error("{}: ", ResponseEnum.INVOKE_FAILURE.getResponseDesc(), e);
+                    throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE);
                 }
             }
         }

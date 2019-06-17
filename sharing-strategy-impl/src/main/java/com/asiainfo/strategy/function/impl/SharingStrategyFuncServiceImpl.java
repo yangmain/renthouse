@@ -3,6 +3,7 @@ package com.asiainfo.strategy.function.impl;
 import com.asiainfo.frame.annotations.RemoteService;
 import com.asiainfo.frame.base.RequestBase;
 import com.asiainfo.frame.base.ResponseBase;
+import com.asiainfo.frame.base.ResponseEnum;
 import com.asiainfo.strategy.function.SharingStrategyFuncService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +32,8 @@ public class SharingStrategyFuncServiceImpl implements SharingStrategyFuncServic
     public ResponseBase sharingStrategy(RequestBase request)
     {
         logger.info("调用功能服务");
-        return new ResponseBase();
+        ResponseBase response = new ResponseBase();
+        response.setResponseEnum(ResponseEnum.SUCCESS);
+        return response;
     }
 }

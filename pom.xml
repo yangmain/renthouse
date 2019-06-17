@@ -34,7 +34,7 @@
         <module>authorization-impl</module>
         <module>sharing-strategy-api</module>
         <module>sharing-strategy-impl</module>
-        <module>unified-portal</module>
+        <module>unified-portal</module>s
     </modules>
 
     <dependencyManagement>

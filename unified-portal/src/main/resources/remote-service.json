@@ -2,10 +2,12 @@
   {
     "serviceId": "100000",
     "remoteInfcName": "com.asiainfo.strategy.function.SharingStrategyFuncService",
-    "serviceCenter": "sharing-strategy-impl"
+    "serviceCenter": "sharing-strategy-impl",
+    "serviceVersion": "1.0.0",
+    "methodName": "sharingStrategy",
+    "requestType": "com.asiainfo.frame.base.RequestBase"
   },
   {
-    "serviceId": "100001",
     "remoteInfcName": "com.asiainfo.strategy.function.SharingStrategyFuncService",
     "serviceCenter": "sharing-strategy-impl"
   }
