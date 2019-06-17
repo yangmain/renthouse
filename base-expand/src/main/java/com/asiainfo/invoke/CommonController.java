@@ -4,7 +4,6 @@ import com.asiainfo.base.ResponseBase;
 import com.asiainfo.base.ResponseEnum;
 import com.asiainfo.exceptions.RemoteInvokeException;
 import com.asiainfo.utils.ClassTypeUtil;
-import com.asiainfo.utils.DateUtil;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,16 +21,8 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.ParseException;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * @Author: Ares
@@ -195,115 +186,7 @@ public class CommonController
             }// 字符串
             else if (String.class.isAssignableFrom(requestType))
             {
-                String tempValue = String.valueOf(value);
-                // 泛型擦除中Date类型会丢失,这里采用一种比较简单粗暴的方法处理
-                if (tempValue.contains(DateUtil.T_VALUE) && tempValue.contains(DateUtil.TIME_SUFFIX))
-                {
-                    try
-                    {
-                        return DateUtil.parse(tempValue);
-                    } catch (Exception e)
-                    {
-                        logger.warn("{}: {}", ResponseEnum.INVOKE_FAILURE_DATE_ERROR.getResponseDesc(), tempValue);
-                    }
-                }
-                return tempValue;
-            }
-            else if (Date.class.isAssignableFrom(requestType))
-            {
-                return DateUtil.parse(value.toString().replaceAll("\"", ""));
-            }
-            else if (LocalDateTime.class.isAssignableFrom(requestType))
-            {
-                return LocalDateTime.parse(value.toString().replaceAll("\"", ""));
-            }
-            // Map
-            else if (Map.class.isAssignableFrom(requestType))
-            {
-                try
-                {
-                    Class<?> clazz = Class.forName(requestType.getName());
-                    String str;
-                    if (flag.booleanValue())
-                    {
-                        str = objectMapper.writeValueAsString(value);
-                    }
-                    else
-                    {
-                        str = value.toString();
-                    }
-                    Object object = objectMapper.readValue(str, clazz);
-                    flag.setValue(true);
-                    Method method = clazz.getMethod("entrySet");
-                    Set<Map.Entry> entrySet = (Set<Map.Entry>) method.invoke(object);
-
-                    Map map;
-                    if (clazz.isInterface())
-                    {
-                        // 默认实现类选取HashMap
-                        map = new HashMap();
-                    }
-                    else
-                    {
-                        map = (Map) clazz.newInstance();
-                    }
-                    for (Map.Entry entry : entrySet)
-                    {
-                        Object key = entry.getKey();
-                        Object tempValue = entry.getValue();
-                        map.put(null == key ? null : paramHandle(key.getClass(), key, flag), null == tempValue ? null : paramHandle(tempValue.getClass(), tempValue, flag));
-                    }
-                    return map;
-                } catch (IOException e)
-                {
-                    logger.error("{}: ", ResponseEnum.INVOKE_FAILURE_JSON_PARSE.getResponseDesc(), e);
-                    throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE_JSON_PARSE);
-                } catch (InstantiationException e)
-                {
-                    logger.error("", e);
-                    throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE);
-                }
-            }// 集合
-            else if (Collection.class.isAssignableFrom(requestType))
-            {
-                try
-                {
-                    Class<?> clazz = Class.forName(requestType.getName());
-                    String str;
-                    if (flag.booleanValue())
-                    {
-                        str = objectMapper.writeValueAsString(value);
-                    }
-                    else
-                    {
-                        str = value.toString();
-                    }
-                    Collection valueCollection = objectMapper.readValue(str, Collection.class);
-                    flag.setValue(true);
-                    Collection collection;
-
-                    if (requestType.isInterface() && List.class.isAssignableFrom(requestType))
-                    {
-                        collection = new ArrayList();
-                    }
-                    else if (requestType.isInterface() && Set.class.isAssignableFrom(requestType))
-                    {
-                        collection = new HashSet();
-                    }
-                    else
-                    {
-                        collection = (Collection) clazz.newInstance();
-                    }
-                    for (Object element : valueCollection)
-                    {
-                        collection.add(null == element ? null : paramHandle(element.getClass(), element, flag));
-                    }
-                    return collection;
-                } catch (InstantiationException | IOException e)
-                {
-                    logger.error("", e);
-                    throw new RemoteInvokeException(ResponseEnum.INVOKE_FAILURE);
-                }
+                return String.valueOf(value);
             }
             else
             {

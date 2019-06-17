@@ -78,7 +78,7 @@ public class RemoteController
         list1.add("success");
 
         LocalDateTime localDateTime = LocalDateTime.now();
-        return authorizationFuncService.authorization(request, 1, 2L, s, 4.0f, (byte) 5, 'a', true, 8.0d, new Integer("10000"), new Long("10001"), new Short("10002"), new Float("10003.0f"), new Byte("127"), new Character('b'), new Boolean("true"), date, parameterUnused, objects, arrayUnused, mapUnused, hashMap, map2, map3, listUnused, map, ares, finalList, localDateTime);
+        return authorizationFuncService.authorization(request, 1, 2L, s, 4.0f, (byte) 5, 'a', true, 8.0d, new Integer("10000"), new Long("10001"), new Short("10002"), new Float("10003.0f"), new Byte("127"), new Character('b'), new Boolean("true"), parameterUnused, objects, arrayUnused, mapUnused, hashMap, map2, listUnused, map, ares, finalList);
     }
 
 }
