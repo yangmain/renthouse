@@ -1,12 +1,12 @@
 [
   {
     "serviceId": "100000",
-    "remoteInfcName": "com.asiainfo.function.AuthorizationFuncService",
-    "serviceCenter": "authorization-impl"
+    "remoteInfcName": "com.asiainfo.strategy.function.SharingStrategyFuncService",
+    "serviceCenter": "sharing-strategy-impl"
   },
   {
     "serviceId": "100001",
-    "remoteInfcName": "com.asiainfo.function.LocalInvokeTestService",
-    "serviceCenter": "authorization-impl"
+    "remoteInfcName": "com.asiainfo.strategy.function.SharingStrategyFuncService",
+    "serviceCenter": "sharing-strategy-impl"
   }
 ]
