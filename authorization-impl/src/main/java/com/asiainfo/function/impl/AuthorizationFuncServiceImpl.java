@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -35,7 +36,7 @@ public class AuthorizationFuncServiceImpl implements AuthorizationFuncService
 
     @Override
     public List<List<List<String>>> authorization(
-            AuthorizationRequest request, int i, long l, short s, float f, byte b, char c, boolean bool, double d, Integer ii, Long ll, Short ss, Float ff, Byte bb, Character cc, Boolean boolBool, Date date, String str, Object[] array, String[] strs, Map map, HashMap map1, Map<String, String> map2, Map<String, Date> map3, List list, Map<String, List<AuthorizationRequest>> map11, List<Map<String, List<AuthorizationRequest>>> ares, List<List<List>> lists)
+            AuthorizationRequest request, int i, long l, short s, float f, byte b, char c, boolean bool, double d, Integer ii, Long ll, Short ss, Float ff, Byte bb, Character cc, Boolean boolBool, Date date, String str, Object[] array, String[] strs, Map map, HashMap map1, Map<String, String> map2, Map<String, Date> map3, List list, Map<String, List<AuthorizationRequest>> map11, List<Map<String, List<AuthorizationRequest>>> ares, List<List<List>> lists, LocalDateTime localDateTime)
     {
         AuthorizationResponse response = new AuthorizationResponse();
         logger.info("开始执行功能方法");
@@ -50,6 +51,7 @@ public class AuthorizationFuncServiceImpl implements AuthorizationFuncService
         logger.info(lists.get(0).toString());
         logger.info(lists.get(0).get(0).toString());
         logger.info(lists.get(0).get(0).get(0).toString());
+        logger.info(localDateTime.toString());
         authorizationBusiService.authorization(request.getAuthorization());
         logger.info("执行功能方法完毕");
         response.setAuthorization(request.getAuthorization());

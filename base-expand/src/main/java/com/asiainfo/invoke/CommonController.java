@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.ParseException;
@@ -216,18 +215,7 @@ public class CommonController
             }
             else if (LocalDateTime.class.isAssignableFrom(requestType))
             {
-                return LocalDateTime.parse(String.valueOf(value));
-            }
-            // 只支持一维数组
-            else if (requestType.isArray())
-            {
-                String[] strings = value.toString().replaceAll("\\[", "").replaceAll("\\]", "").split(",");
-                Object array = Array.newInstance(requestType.getComponentType(), strings.length);
-                for (int k = 0; k < strings.length; k++)
-                {
-                    Array.set(array, k, strings[k]);
-                }
-                return array;
+                return LocalDateTime.parse(value.toString().replaceAll("\"", ""));
             }
             // Map
             else if (Map.class.isAssignableFrom(requestType))

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -76,8 +77,8 @@ public class RemoteController
         lists.add(list1);
         list1.add("success");
 
-
-        return authorizationFuncService.authorization(request, 1, 2L, s, 4.0f, (byte) 5, 'a', true, 8.0d, new Integer("10000"), new Long("10001"), new Short("10002"), new Float("10003.0f"), new Byte("127"), new Character('b'), new Boolean("true"), date, parameterUnused, objects, arrayUnused, mapUnused, hashMap, map2, map3, listUnused, map, ares, finalList);
+        LocalDateTime localDateTime = LocalDateTime.now();
+        return authorizationFuncService.authorization(request, 1, 2L, s, 4.0f, (byte) 5, 'a', true, 8.0d, new Integer("10000"), new Long("10001"), new Short("10002"), new Float("10003.0f"), new Byte("127"), new Character('b'), new Boolean("true"), date, parameterUnused, objects, arrayUnused, mapUnused, hashMap, map2, map3, listUnused, map, ares, finalList, localDateTime);
     }
 
 }
