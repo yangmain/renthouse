@@ -1,3 +1,4 @@
+# 配置eureka端口
 server:
   port: 8081
 #================================安全认证配置=============================
@@ -8,12 +9,16 @@ server:
 #================================安全认证配置=============================
 eureka:
   instance:
+    # 配置主机名
     hostname: 127.0.0.1
     appname: DiscoveryServer
   client:
+    # 配置服务注册中心是否以自己为客户端进行注册(默认配置false)
     registerWithEureka: false
+    # 是否取得注册信息(配置false)
     fetchRegistry: false
     serviceUrl:
+      # 配置eureka客户端的缺省域(该配置可能没有提示,请复制或者手动输入,切勿使用有提示的service-url会引起内置tomcat报错)
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 #   心跳检查,默认是false,Eureka自我保护模式会没有及时剔除关停节点,
 #   关闭eureka server的自我保护模式并在client端配置心跳开启
