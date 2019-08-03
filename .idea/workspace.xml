@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a00c5d57-aee2-46a4-bcbf-91435ce3942a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/authorization-impl/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sharing-strategy-impl/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unified-portal/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ThinkPad.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/renthouse.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-impl/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="e4cefa11-9b57-4e03-8efd-542e15c9634c" name="不用提交的代码" comment="" />
     <list id="6860d532-cae5-4dbe-8659-30e72d7ee8c7" name="不用提交的配置文件" comment="" />
@@ -42,13 +28,13 @@
     <session id="-1080348058">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -58,7 +44,7 @@
           <entry key="java" value="9758" />
           <entry key="json" value="37" />
           <entry key="properties" value="2" />
-          <entry key="txt" value="135" />
+          <entry key="txt" value="145" />
           <entry key="xml" value="217" />
           <entry key="yaml" value="10" />
         </counts>
@@ -68,7 +54,7 @@
           <entry key="CLASS" value="1" />
           <entry key="JAVA" value="9758" />
           <entry key="JSON" value="37" />
-          <entry key="PLAIN_TEXT" value="157" />
+          <entry key="PLAIN_TEXT" value="167" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="217" />
           <entry key="YAML" value="10" />
@@ -84,7 +70,7 @@
           <entry key="json" value="26" />
           <entry key="pom" value="3" />
           <entry key="properties" value="19" />
-          <entry key="xml" value="75" />
+          <entry key="xml" value="76" />
           <entry key="yaml" value="4" />
           <entry key="yml" value="1" />
         </counts>
@@ -98,7 +84,7 @@
           <entry key="JSON" value="26" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="19" />
-          <entry key="XML" value="78" />
+          <entry key="XML" value="79" />
           <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
@@ -111,49 +97,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eureka-server/src/main/resources/application.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authorization-impl/src/main/resources/application.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-strategy-impl/src/main/resources/application.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/unified-portal/src/main/resources/application.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unified-portal/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="38" lean-forward="true" selection-start-column="24" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-strategy-impl/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="45" />
+            <state relative-caret-position="104">
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -257,10 +206,10 @@
         <option value="$PROJECT_DIR$/unified-portal/src/main/java/com/asiainfo/portal/controller/RemoteController.java" />
         <option value="$PROJECT_DIR$/unified-portal/src/main/resources/remote-service.json" />
         <option value="$PROJECT_DIR$/base-expand/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/authorization-impl/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/sharing-strategy-impl/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/unified-portal/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -510,154 +459,6 @@
               <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
               <item name="renthouse" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="authorization-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="authorization-impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="authorization-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="authorization-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="authorization-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="authorization-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="base-expand" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="sharing-strategy-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="renthouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="renthouse" type="462c0819:PsiDirectoryNode" />
-              <item name="unified-portal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -675,12 +476,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.idea/workspace.xml" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564716755137" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564813141807" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gateway_portal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15497553" />
     <property name="project.structure.side.proportion" value="0.51824135" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
@@ -722,17 +523,10 @@
     </option>
     <option name="contentProportion" value="0.26594862" />
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthorizationImplApplication">
+  <component name="RunManager" selected="Spring Boot.AuthorizationImplApplication (1)">
     <configuration name="AuthorizationImplApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="authorization-impl" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.asiainfo.authorization.AuthorizationImplApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationImplApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="authorization-impl" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.asiainfo.AuthorizationImplApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -753,13 +547,6 @@
     <configuration name="SharingStrategyImplApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="sharing-strategy-impl" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.asiainfo.strategy.SharingStrategyImplApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SharingStrategyImplApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="sharing-strategy-impl" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.asiainfo.SharingStrategyImplApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -770,13 +557,6 @@
     <configuration name="UnifiedPortalApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="unified-portal" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.asiainfo.portal.UnifiedPortalApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UnifiedPortalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="unified-portal" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.asiainfo.UnifiedPortalApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -786,9 +566,6 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.EurekaServerApplication" />
-      <item itemvalue="Spring Boot.UnifiedPortalApplication" />
-      <item itemvalue="Spring Boot.AuthorizationImplApplication" />
-      <item itemvalue="Spring Boot.SharingStrategyImplApplication" />
       <item itemvalue="Spring Boot.UnifiedPortalApplication (1)" />
       <item itemvalue="Spring Boot.SharingStrategyImplApplication (1)" />
       <item itemvalue="Spring Boot.AuthorizationImplApplication (1)" />
@@ -810,7 +587,9 @@
       <workItem from="1560256450114" duration="29446000" />
       <workItem from="1560429539439" duration="13593000" />
       <workItem from="1560493773534" duration="35302000" />
-      <workItem from="1564716119993" duration="621000" />
+      <workItem from="1564716119993" duration="680000" />
+      <workItem from="1564803988187" duration="114000" />
+      <workItem from="1564813103083" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="单参数版本小成">
       <created>1560405910430</created>
@@ -840,17 +619,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560736441308</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="统一配置文件">
+      <created>1564716771563</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564716771563</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114090000" />
+    <option name="totallyTimeSpent" value="114269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="736" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28883496" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2985437" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -969,7 +755,8 @@
     <MESSAGE value="1.0.0版本出炉" />
     <MESSAGE value="干掉数组单独处理,支持localDateTime" />
     <MESSAGE value="不处理date这时候没有递归处理性能也较好" />
-    <option name="LAST_COMMIT_MESSAGE" value="不处理date这时候没有递归处理性能也较好" />
+    <MESSAGE value="统一配置文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="统一配置文件" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1155,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1210,15 +990,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unified-portal/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" lean-forward="true" selection-start-column="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/unified-portal/src/main/resources/application.properties" />
     <entry file="file://$PROJECT_DIR$/unified-portal/src/main/resources/application.yaml">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -1294,11 +1075,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>base-expand</last-edited>
+          <last-edited>renthouse</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.51824135" />
                 <option value="0.6" />
               </list>
             </option>
@@ -1323,7 +1104,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.6014967" />
+                <option value="0.51824135" />
               </list>
             </option>
           </splitter-proportions>
